@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>KIVA Data Warehouse</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <h1>KIVA Data Warehouse Analytics</h1>
+  <div class="chart-container">
+    <div class="chart">
+      <div class="loader" id="borrowingRateLoader"></div>
+      <canvas id="borrowingRateChart" class="chart"></canvas>
+    </div>
+    <div class="chart">
+      <div class="loader" id="disbursementRateLoader"></div>
+      <canvas id="disbursementRateChart" class="chart"></canvas>
+    </div>
+    <div class="chart canvas-container demographic-trend-chart">
+      <div class="loader" id="demographicTrendLoader"></div>
+      <canvas id="demographicTrendChart" class="chart"></canvas>
+    </div>
+  </div>
+  <div class="chart-container">
+    <div id="borrowingRateFacts" class="fact-dimension-container">
+      <h3>Borrowing Rate</h3>
+      <p><strong>Dimensions:</strong> Date, Region</p>
+      <p><strong>Facts:</strong> Number of loans</p>
+    </div>
+    <div id="disbursementRateFacts" class="fact-dimension-container">
+      <h3>Disbursement Rate</h3>
+      <p><strong>Dimensions:</strong> Date, Region</p>
+      <p><strong>Facts:</strong> Amount disbursed</p>
+    </div>
+    <div id="demographicTrendFacts" class="fact-dimension-container">
+      <h3>Demographic Trend</h3>
+      <p><strong>Dimensions:</strong> Region</p>
+      <p><strong>Facts:</strong> Number of borrowers</p>
+    </div>
+  </div>
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/7.6.1/d3.min.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
